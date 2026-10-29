@@ -36,6 +36,10 @@ Xây dựng ứng dụng quản lý món ăn gồm frontend, backend API và cơ
 5. Kiểm tra các lệnh trong `scripts` của `client/package.json` và `server/package.json`.
 6. Chạy frontend và backend theo các lệnh được khai báo trong từng file `package.json`.
 7. Có thể sử dụng Docker Compose nếu cấu hình Docker đã hoàn chỉnh.
-
 ## 6. Bảo mật
-Không đưa file `.env`, mật khẩu, access token hoặc chuỗi kết nối cơ sở dữ liệu chứa thông tin xác thực lên GitHub.
+
+- Không đưa file `.env` chứa thông tin kết nối thật lên GitHub.
+- Không công khai mật khẩu, access token hoặc thông tin xác thực MongoDB Atlas.
+- Sử dụng file `.env.example` để cung cấp tên các biến môi trường cần thiết mà không chứa thông tin bí mật.
+- Cấu hình `.gitignore` để loại trừ các file môi trường và thư mục `node_modules/`.
+- Lưu các thông tin cấu hình nhạy cảm trong Environment Variables của Render khi triển khai ứng dụng.
